@@ -156,3 +156,62 @@ header img {
         width: 200px; 
     }
 }
+
+/* Ajouter du style pour le tableau responsive */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+    table, th, td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        display: block;
+        margin-bottom: 1em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    tbody tr td {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75em;
+    }
+
+    tbody tr td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 50%;
+    }
+
+    td, th {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    header {
+        padding: 0.5em 0;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+
+    input, textarea, button {
+        font-size: 0.9em;
+    }
+}
+
