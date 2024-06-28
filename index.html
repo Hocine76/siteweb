@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme de Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Mezianus Transformatus</h1>
+        <img src="logo.png" alt="Logo du site">
+    </header>
+    <main>
+        <section class="programme">
+            <h2>Programme Hebdomadaire</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Jour</th>
+                        <th>Échauffement</th>
+                        <th>Exercices (20-30 min)</th>
+                        <th>Petit-déjeuner</th>
+                        <th>Déjeuner</th>
+                        <th>Dîner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lundi</td>
+                        <td>Marche sur place, Cercles de bras, Levées de genoux, Rotations de hanches (5 min)</td>
+                        <td>Squats (3x10) <br> Pompes (3x8-10) <br> Planche (3x20 sec) <br> Crunchs (3x10) <br> Pont fessier (3x10)</td>
+                        <td>Yaourt grec, fruits frais, graines de chia</td>
+                        <td>Salade de poulet grillé, légumes variés, vinaigrette légère</td>
+                        <td>Saumon cuit au four, brocolis, riz complet</td>
+                    </tr>
+                    <tr>
+                        <td>Mardi</td>
+                        <td>Marche sur place, Cercles de bras, Levées de genoux, Rotations de hanches (5 min)</td>
+                        <td>Fentes (3x10) <br> Dips sur chaise (3x8-10) <br> Bird Dog (3x10) <br> Mountain Climbers (3x10) <br> Étirements</td>
+                        <td>Smoothie (épinards, banane, lait d'amande)</td>
+                        <td>Quinoa, légumes rôtis, pois chiches</td>
+                        <td>Poulet grillé, haricots verts, patates douces</td>
+                    </tr>
+                    <tr>
+                        <td>Mercredi</td>
+                        <td>Marche sur place, Cercles de bras, Levées de genoux, Rotations de hanches (5 min)</td>
+                        <td>Squats (3x10) <br> Pompes (3x8-10) <br> Planche (3x20 sec) <br> Crunchs (3x10) <br> Pont fessier (3x10)</td>
+                        <td>Flocons d'avoine, baies, amandes</td>
+                        <td>Wrap de dinde, légumes frais, avocat</td>
+                        <td>Tofu sauté, légumes, nouilles de riz</td>
+                    </tr>
+                    <tr>
+                        <td>Jeudi</td>
+                        <td>Marche sur place, Cercles de bras, Levées de genoux, Rotations de hanches (5 min)</td>
+                        <td>Fentes (3x10) <br> Dips sur chaise (3x8-10) <br> Bird Dog (3x10) <br> Mountain Climbers (3x10) <br> Étirements</td>
+                        <td>Œufs brouillés, épinards, pain complet</td>
+                        <td>Soupe de lentilles, salade verte</td>
+                        <td>Filet de morue, asperges, quinoa</td>
+                    </tr>
+                    <tr>
+                        <td>Vendredi</td>
+                        <td>Marche sur place, Cercles de bras, Levées de genoux, Rotations de hanches (5 min)</td>
+                        <td>Squats (3x10) <br> Pompes (3x8-10) <br> Planche (3x20 sec) <br> Crunchs (3x10) <br> Pont fessier (3x10)</td>
+                        <td>Smoothie (fraises, banane, lait de coco)</td>
+                        <td>Salade de thon, légumes, pois chiches</td>
+                        <td>Steak maigre, champignons, haricots verts</td>
+                    </tr>
+                    <tr>
+                        <td>Samedi</td>
+                        <td>Marche sur place, Cercles de bras, Levées de genoux, Rotations de hanches (5 min)</td>
+                        <td>Fentes (3x10) <br> Dips sur chaise (3x8-10) <br> Bird Dog (3x10) <br> Mountain Climbers (3x10) <br> Étirements</td>
+                        <td>Pain complet, avocat, œuf poché</td>
+                        <td>Couscous, légumes, pois chiches</td>
+                        <td>Poulet rôti, légumes rôtis, riz sauvage</td>
+                    </tr>
+                    <tr>
+                        <td>Dimanche</td>
+                        <td>Repos actif (marche légère, étirements, yoga doux)</td>
+                        <td>Repos actif (marche légère, étirements, yoga doux)</td>
+                        <td>Yaourt grec, miel, noix</td>
+                        <td>Salade de quinoa, légumes variés, poulet grillé</td>
+                        <td>Crevettes sautées, légumes, nouilles de riz</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="tracking">
+            <h2>Suivi du Programme et du Poids</h2>
+            <form id="tracking-form">
+                <label for="day">Jour :</label>
+                <input type="date" id="day" name="day" required>
+                <label for="weight">Poids (kg) :</label>
+                <input type="number" id="weight" name="weight" required>
+                <label for="activities">Activités Réalisées :</label>
+                <textarea id="activities" name="activities" required></textarea>
+                <button type="submit">Enregistrer</button>
+            </form>
+            <div id="tracking-data"></div>
+        </section>
+        <section class="weight-progress">
+            <h2>Suivi du Poids</h2>
+            <canvas id="weightChart"></canvas>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
