@@ -169,7 +169,7 @@ header img {
         width: 100%;
         box-sizing: border-box;
     }
-
+    
     thead {
         display: none;
     }
@@ -179,22 +179,34 @@ header img {
         margin-bottom: 1em;
         border: 1px solid #ddd;
         border-radius: 4px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #f9f9f9;
     }
 
     tbody tr td {
         display: flex;
         justify-content: space-between;
         padding: 0.75em;
+        border-bottom: 1px solid #ddd;
     }
 
     tbody tr td::before {
         content: attr(data-label);
         font-weight: bold;
         flex-basis: 50%;
+        color: #333;
+    }
+
+    tbody tr td:last-child {
+        border-bottom: none;
     }
 
     td, th {
-        padding: 0.5em;
+        padding: 0.75em;
         font-size: 0.9em;
     }
 }
