@@ -86,3 +86,26 @@ function updateChart() {
     weightChart.data.datasets[0].data = weights;
     weightChart.update();
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Tableau des noms des jours en français
+    const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    // Récupérer le jour actuel (0 = Dimanche, 1 = Lundi, etc.)
+    const today = new Date().getDay();
+    // Nom du jour actuel
+    const todayName = days[today];
+
+    // Sélectionner toutes les lignes du tableau
+    const rows = document.querySelectorAll('table tbody tr');
+
+    // Parcourir chaque ligne du tableau
+    rows.forEach(row => {
+        // Récupérer la cellule contenant le nom du jour
+        const dayCell = row.querySelector('td[data-label="Jour"]');
+        // Vérifier si la cellule contient le nom du jour actuel
+        if (dayCell && dayCell.textContent.trim() === todayName) {
+            // Ajouter la classe de surbrillance à la ligne
+            row.classList.add('highlight');
+        }
+    });
+});
