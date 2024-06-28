@@ -144,15 +144,13 @@ canvas {
     }
 }
 
-/* Dans styles.css */
 header img {
     display: block;
-    margin: 20px auto; /* Espace au-dessus et centrage */
+    margin: 20px auto;
     width: 300px; 
-    height: auto; 
+    height: auto;
 }
 
-/* Exemple de Media Query pour mobile */
 @media (max-width: 768px) {
     header img {
         width: 200px; 
